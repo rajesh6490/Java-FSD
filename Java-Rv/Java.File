@@ -1,5 +1,4 @@
-
-       // Variables
+###  Variables
 import java.util.*;
 public class Var{
     public static void main(String args[]){
@@ -130,11 +129,10 @@ public class Var{
         System.out.println(z);
 
 
+### DATA TYPES###
 
 
 
-
-### DATA TYPE
 import java.util.*;
 public class Var{
     public static void main(String args[]){
