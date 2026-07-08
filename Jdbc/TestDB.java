@@ -24,15 +24,12 @@ public class TestDB {
                         System.out.print("Enter ID: ");
                         int id = sc.nextInt();
                         sc.nextLine();
-
                         System.out.print("Enter Name: ");
                         String name = sc.nextLine();
-
                         String insertSQL = "INSERT INTO student VALUES (?, ?)";
                         PreparedStatement ps1 = con.prepareStatement(insertSQL);
                         ps1.setInt(1, id);
                         ps1.setString(2, name);
-
                         ps1.executeUpdate();
                         System.out.println("Data Inserted!");
                         break;
