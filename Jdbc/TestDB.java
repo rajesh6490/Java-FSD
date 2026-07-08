@@ -1,19 +1,14 @@
 import java.sql.*;
 import java.util.Scanner;
 public class TestDB {
-
     static final String url = "jdbc:mysql://localhost:3306/testdb";
     static final String user = "root";
     static final String password = "";
-
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, user, password);
-
             System.out.println("Connected to MySQL!");
 
             while (true) {
