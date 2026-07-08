@@ -10,7 +10,6 @@ public class TestDB {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, user, password);
             System.out.println("Connected to MySQL!");
-
             while (true) {
                 System.out.println("\n===== MENU =====");
                 System.out.println("1. Insert");
@@ -19,11 +18,8 @@ public class TestDB {
                 System.out.println("4. Delete");
                 System.out.println("5. Exit");
                 System.out.print("Enter choice: ");
-
                 int choice = sc.nextInt();
-
                 switch (choice) {
-
                     case 1:
                         // INSERT
                         System.out.print("Enter ID: ");
