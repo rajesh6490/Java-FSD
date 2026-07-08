@@ -21,7 +21,6 @@ public class TestDB {
                 int choice = sc.nextInt();
                 switch (choice) {
                     case 1:
-                        // INSERT
                         System.out.print("Enter ID: ");
                         int id = sc.nextInt();
                         sc.nextLine();
