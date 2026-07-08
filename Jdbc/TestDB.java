@@ -1,6 +1,5 @@
 import java.sql.*;
 import java.util.Scanner;
-
 public class TestDB {
 
     static final String url = "jdbc:mysql://localhost:3306/testdb";
