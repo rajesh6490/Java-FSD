@@ -36,21 +36,16 @@ public class TestDB {
                         ps1.executeUpdate();
                         System.out.println("Data Inserted!");
                         break;
-
                     case 2:
-                        // VIEW
                         String selectSQL = "SELECT * FROM student";
                         Statement stmt = con.createStatement();
                         ResultSet rs = stmt.executeQuery(selectSQL);
-
                         System.out.println("\nID\tName");
                         while (rs.next()) {
                             System.out.println(rs.getInt("id") + "\t" + rs.getString("name"));
                         }
                         break;
-
                     case 3:
-                        // UPDATE
                         System.out.print("Enter ID to update: ");
                         int uid = sc.nextInt();
                         sc.nextLine();
