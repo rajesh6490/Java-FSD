@@ -1,13 +1,13 @@
 import java.sql.*;
 import java.util.Scanner;
 public class TestDB {
-    static final String url = "jdbc:mysql://localhost:3306/testdb";
-    static final String user = "root";
-    static final String password = "";
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+static final String url = "jdbc:mysql://localhost:3306/testdb";
+static final String user = "root";
+static final String password = "";
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+try {
+        Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, user, password);
             System.out.println("Connected to MySQL!");
             while (true) {
@@ -54,41 +54,32 @@ public class TestDB {
                         PreparedStatement ps2 = con.prepareStatement(updateSQL);
                         ps2.setString(1, newName);
                         ps2.setInt(2, uid);
-
                         int rows = ps2.executeUpdate();
                         if (rows > 0)
                             System.out.println("Updated successfully!");
                         else
                             System.out.println("ID not found!");
                         break;
-
                     case 4:
-                        // DELETE
                         System.out.print("Enter ID to delete: ");
                         int did = sc.nextInt();
-
                         String deleteSQL = "DELETE FROM student WHERE id=?";
                         PreparedStatement ps3 = con.prepareStatement(deleteSQL);
                         ps3.setInt(1, did);
-
                         int delRows = ps3.executeUpdate();
                         if (delRows > 0)
                             System.out.println("Deleted successfully!");
                         else
                             System.out.println("ID not found!");
                         break;
-
                     case 5:
-                        // EXIT
                         System.out.println("Exiting...");
                         con.close();
                         System.exit(0);
-
                     default:
                         System.out.println("Invalid choice!");
                 }
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
