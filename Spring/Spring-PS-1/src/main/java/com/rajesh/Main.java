@@ -1,22 +1,15 @@
 package com.rajesh;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-
 @SpringBootApplication
 public class Main {
-
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
     }
