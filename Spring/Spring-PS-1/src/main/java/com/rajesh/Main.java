@@ -14,46 +14,36 @@ public class Main {
         SpringApplication.run(Main.class, args);
     }
 }
-
 @Entity
 @Table(name = "employee")
 class Employee {
 
     @Id
     private int empNo;
-
     private String name;
-
     private String address;
-
     public Employee() {
     }
     public int getEmpNo() {
         return empNo;
     }
-
     public void setEmpNo(int empNo) {
         this.empNo = empNo;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public String getAddress() {
         return address;
     }
-
     public void setAddress(String address) {
         this.address = address;
     }
 }
 interface EmployeeRepository extends JpaRepository<Employee, Integer> {
-
 }
 @RestController
 @CrossOrigin("*")
