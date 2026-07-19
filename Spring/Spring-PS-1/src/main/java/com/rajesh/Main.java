@@ -48,16 +48,12 @@ interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 @RestController
 @CrossOrigin("*")
 class EmployeeController {
-
     @Autowired
     private EmployeeRepository repository;
-
     @PostMapping("/save")
     public Employee saveEmployee(@RequestBody Employee employee) {
-
         return repository.save(employee);
     }
-
     @GetMapping("/all")
     public List<Employee> getAllEmployees() {
 
